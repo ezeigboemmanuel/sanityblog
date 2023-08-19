@@ -42,7 +42,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
 
             </div>
-            <div className='relative w-full h-96 mx-5'>
+            <div className='relative w-full h-96'>
                 <Image
                     fill
                     src={urlForImage(post.mainImage).url()}
