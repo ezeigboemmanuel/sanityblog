@@ -42,7 +42,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
 
             </div>
-            <div className='relative w-full h-96 '>
+            <div className='relative w-full h-96 mx-5'>
                 <Image
                     fill
                     src={urlForImage(post.mainImage).url()}
@@ -50,11 +50,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
                     className="object-cover"
                 />
             </div>
+            <div className="mx-5">
+                <PortableText
+                    value={post.body}
+                    components={Text}
+                />
+            </div>
 
-            <PortableText
-                value={post.body}
-                components={Text}
-            />
 
             <MoreBlogs posts={posts} post={post} />
             <Comments post={post} />
