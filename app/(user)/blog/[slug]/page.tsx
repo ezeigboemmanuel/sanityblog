@@ -28,9 +28,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
     const post: Post = await client.fetch(query, params);
     const posts = await client.fetch(allPosts);
     return (
-        <article className="mt-10 max-w-6xl mx-auto my-5">
+        <article className="mt-10 max-w-6xl mx-auto">
             <h1 className="text-6xl text-center font-bold">{post.title}</h1>
-            <div className="flex flex-row gap-9 items-center justify-center my-5">
+            <div className="flex flex-row gap-9 items-center justify-center mx-5 my-5">
                 <p>Posted By: {post.author.name}</p>
                 <p>
                     Published at: {new Date(post._createdAt).toLocaleDateString("en-US", {
