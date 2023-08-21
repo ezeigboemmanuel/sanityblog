@@ -9,7 +9,7 @@ type Props = {
 }
 
 function MoreBlogs({ posts, post }: Props) {
-  const filteredPosts = posts.filter(item => item.title !== post.title)
+  const filteredPosts = posts.filter(item => item.title !== post.title).slice(0, 3)
   return (
     <div>
       <h2 className="text-2xl mt-10 px-5">Read More Posts</h2>
